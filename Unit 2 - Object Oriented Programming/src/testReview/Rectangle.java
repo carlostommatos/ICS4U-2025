@@ -1,6 +1,6 @@
 
 package testReview;
-
+//test
 public class Rectangle {
 
     private double length;
@@ -21,14 +21,13 @@ public class Rectangle {
     }
 
     // user is allowed to specify the length and width and units
-    public Rectangle(double length, double width, Stirng units) {
+    public Rectangle(double length, double width, String units) {
 
         this.length = length;
         this.width = width;
         this.units = units;
 
     }
-
 
     // ACCESSOR METHODS
     public double getLength() {
@@ -68,7 +67,7 @@ public class Rectangle {
     }
 
     public boolean isSquare() {
-        if length = width {
+        if (this.length == this.width) {
             return true;
         }
 
@@ -82,6 +81,7 @@ public class Rectangle {
     public String toString() {
         String info = "Length: " + this.length + "\n"
                 + "Width: " + this.width + "\n";
+        return info;
     }
 
     
