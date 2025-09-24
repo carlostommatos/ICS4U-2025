@@ -1,5 +1,12 @@
 package golf;
 
+/*
+Hole
+a class for hole objects used in the PlayGolfClient
+Carlos Matos
+Wednesday, September 24, 2025
+ */
+
 public class Hole {
 
     // INSTANCE VARIABLES
@@ -28,6 +35,10 @@ public class Hole {
         else
             this.par = 5;
 
+        // randomly generated sandtrap size and location
+        this.sandtrapLocation = Math.random() * (this.distance / 2) + this.distance / 4;
+        this.sandtrapSize = Math.random() * (25 - 5) + 5; // random santrap size from 5 to 25
+
     }
 
     // creates a hole object where the client can choose the number, distance and par
@@ -39,7 +50,7 @@ public class Hole {
 
         this.sandtrapSize = Math.random() * (25 - 5) + 5; // random santrap size from 5 to 25
         // add sandtrap location
-
+        this.sandtrapLocation = Math.random() * (this.distance / 2) + this.distance / 4;
     }
 
 
@@ -68,7 +79,18 @@ public class Hole {
     // MUTATORS
     // no mutators needed
 
+    // BEHAVIOURAL
+    // no behavioural methods needed
 
+
+    // HELPER METHODS
+    public String toString() {
+
+        return "Number: " + this.number + "\n" + "Distance: " + this.distance + "\n"
+                + "Par: " + this.par + "\n" + "Sandtrap Location: " + this.sandtrapLocation + "\n"
+                + "Sandtrap Size: " + this.sandtrapSize;
+
+    }
 
 
 

@@ -1,5 +1,12 @@
 package circle;
 
+/*
+Circle
+a class for circle objects used in CircleClient
+Carlos Matos
+Thursday, September 18, 2025
+ */
+
 public class Circle {
 
     // INSTANCE VARIABLES

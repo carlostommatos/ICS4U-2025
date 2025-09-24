@@ -1,5 +1,12 @@
 package circle;
 
+/*
+Sphere
+creates spheres used in the SphereClient, child of the Circle class
+Carlos Matos
+Tuesday, September 23, 2025
+ */
+
 public class Sphere extends Circle {
 
     // INSTANCE VARIABLES
@@ -41,13 +48,13 @@ public class Sphere extends Circle {
         return area;
     }
 
-    public double calculateVolume() {
+    public double calculateVolume() { // calculates the volume of the sphere
         double volume = (4/3) * pi * Math.pow(this.getRadius(), 3);
         return volume;
     }
 
 
-
+    // HELPER METHODS
     public String toString() {
         return super.toString() + "\n" + "solid: " + this.solid;
     }

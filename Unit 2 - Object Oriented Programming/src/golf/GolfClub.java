@@ -1,5 +1,12 @@
 package golf;
 
+/*
+GolfClub
+a class for golf club objects used in the PlayGolfClient
+Carlos Matos
+Wednesday, September 24, 2025
+ */
+
 public class GolfClub {
 
     // INSTANCE VARIABLES
@@ -43,7 +50,7 @@ public class GolfClub {
         return this.minDistance;
     }
 
-    public double maxDistance() {
+    public double getMaxDistance() {
         return this.maxDistance;
     }
 
@@ -83,7 +90,8 @@ public class GolfClub {
                 break;
             case 3: // strong force: range is half between the min and max distance to the max distance
                 // ----I----I
-                distance = Math.random() * ((this.maxDistance - minDistance) / 2)  + ((this.maxDistance + this.minDistance) / 2);
+                distance = Math.random() * ((this.maxDistance - minDistance) / 2)
+                        + ((this.maxDistance + this.minDistance) / 2);
                 break;
         }
         return distance;

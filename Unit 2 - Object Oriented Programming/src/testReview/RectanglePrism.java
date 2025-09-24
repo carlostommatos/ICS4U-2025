@@ -33,15 +33,16 @@ public class RectanglePrism extends Rectangle {
 
     // BEHAVIOUR METHODS
     public double calculateArea() {
-        return 2 * ((this.width * this.height) + (this.length * this.width) + (this.length * this.height));
+        return 2 * ((this.getWidth() * this.height)
+                + (this.getLength() * this.getWidth()) + (this.getLength() * this.height));
     }
 
     public double calculateVolume() {
-        return this.length * this.width * this.height;
+        return this.getLength() * this.getWidth() * this.height;
     }
 
     public boolean isCube() {
-        if (this.length == this.width && this.width == this.height) {
+        if (this.getLength() == this.getWidth() && this.getWidth() == this.height) {
             return true;
         }
         else {

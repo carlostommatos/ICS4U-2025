@@ -1,6 +1,6 @@
 
 package testReview;
-//test
+
 public class Rectangle {
 
     private double length;
