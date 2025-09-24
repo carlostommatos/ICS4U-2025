@@ -20,4 +20,39 @@ public class RectanglePrism extends Rectangle {
     }
 
 
+    // ACCESSOR METHODS
+    public double getHeight() {
+        return this.height;
+    }
+
+    // MUTATOR METHODS
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+
+    // BEHAVIOUR METHODS
+    public double calculateArea() {
+        return 2 * ((this.width * this.height) + (this.length * this.width) + (this.length * this.height));
+    }
+
+    public double calculateVolume() {
+        return this.length * this.width * this.height;
+    }
+
+    public boolean isCube() {
+        if (this.length == this.width && this.width == this.height) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    // HELPER METHODS
+    public String toString() {
+        return super.toString() + "\n" + "Height: " + this.height;
+    }
+
 }
