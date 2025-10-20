@@ -13,10 +13,11 @@ public class PineTrees {
     }
 
     public static double trees(double treesOwned, int years) {
-
+        // after the chosen number of years, return the result.
         if (years == 0)
             return treesOwned;
 
+        // each year, sell 12% of the trees and plant 600 new ones
         else
             treesOwned = trees(treesOwned * 0.88 + 600, years - 1);
 
