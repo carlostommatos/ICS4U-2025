@@ -34,7 +34,6 @@ public class Circle {
 
 
 
-
     // ACCESSOR METHODS
 
     // gets the radius of the given circle object
