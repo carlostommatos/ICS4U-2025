@@ -43,6 +43,7 @@ public class TwoDArraySample {
         } //rows
 
         //Display contents of array
+
         for (int r = 0 ; r < datesArray.length ; r++)
         {
             System.out.print(namesArray[r] + "\t");
