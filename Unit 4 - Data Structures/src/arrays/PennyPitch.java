@@ -1,5 +1,11 @@
-package project4;
+package arrays;
 
+/*
+PennyPitch
+simulates a game where players toss pennies at a board to win a prize
+Carlos Matos
+Tuesday, November 4, 2025
+ */
 
 import java.util.Scanner;
 
@@ -9,7 +15,17 @@ public class PennyPitch {
 
         Scanner sc = new Scanner(System.in); // scanner to record whether the user wants to play again
 
+        System.out.println("Penny Pitch \n");
+        System.out.println("Throw ten pennies at the 5x5 grid.");
+        System.out.println("Spaces that the pennies land on are marked with a 7. \n");
 
+        String [] prizes = {"Cascades Casino Gift Card", "Computer Science spirit wear",
+                "6 or 7 pieces of candy", "Stuffed animal", "Yo-yo"};
+
+        System.out.println("The prizes are:");
+
+        for (int i = 0; i < 5; i++)
+            System.out.println(i + 1 + ": " + prizes [i]);
 
         // 1. INITIALIZE THE 5X5 GAME BOARD WITH 
         //    5 RANDOM PRIZES APPEARING IN THREE DIFFERENT ELEMENTS
@@ -21,15 +37,6 @@ public class PennyPitch {
         // 0 means empty
         // all elements are 0 by default
 
-//        // print the game board
-//        for (int r = 0 ; r < board.length ; r++)
-//        {
-//            for (int c = 0 ; c < board[r].length ; c++)
-//            {
-//                System.out.print (board [r] [c] + "\t");
-//            } //columns
-//            System.out.println();
-//        } //rows
 
         // variables for the row and column for adding a prize
         int row;
@@ -54,6 +61,7 @@ public class PennyPitch {
             } // n for loop
         } // i for loop
 
+        System.out.println();
 
         // 5. LOOP THE GAME AS LONG AS THE USER WANTS TO PLAY AGAIN
         //    CLEAR THE PENNIES BUT KEEP 
@@ -62,9 +70,9 @@ public class PennyPitch {
         do {
             // 2. DISPLAY THE GAME BOARD SO THE PLAYER
             //    CAN SEE THE PRIZES THEY CAN WIN
-
             // print the board array
             System.out.println();
+            System.out.println("These are the prizes on the board: \n");
             for (int r = 0; r < board.length; r++) {
                 for (int c = 0; c < board[r].length; c++) {
                     System.out.print(board[r][c] + "\t");
@@ -103,10 +111,10 @@ public class PennyPitch {
             }
 
             // print the board array with the pennies
-            System.out.println();
+            System.out.println("*you throw ten pennies* \n");
             for (int r = 0; r < pennyBoard.length; r++) {
                 for (int c = 0; c < pennyBoard[r].length; c++) {
-                    System.out.print(board[r][c] + "\t");
+                    System.out.print(pennyBoard[r][c] + "\t");
                 } //columns
                 System.out.println();
             } //rows
@@ -139,24 +147,29 @@ public class PennyPitch {
             // print whatever prizes were won
             // only repeats from prizes 1-5 because 0 is always false
             System.out.println();
+            boolean noPrize = true;
             for (int i = 1; i < 6; i++)
-                if (prizeWon[i])
-                    System.out.println("You won prize: " + i);
+                if (prizeWon[i]) {
+                    System.out.println("You won prize " + i + ": " + prizes[i - 1]);
+                    noPrize = false;
+                }
+            if (noPrize)
+                System.out.println("You didn't win a prize.");
             System.out.println();
 
             System.out.println("Would you like to play again? (Y/N)");
             // takes the first letter of what the user says and converts to uppercase
             // for example, yes, Yes, y, Y would work
             char YN = Character.toUpperCase(sc.next().charAt(0));
-
             // make playAgain match whether the user wants to play again
             switch (YN) {
                 case ('Y'): // keep here for clarity
                     playAgain = true;
+                    break;
                 case ('N'):
                     playAgain = false;
+                    System.out.println("Thanks for playing!");
             }
-
         } // do loop
 
         while (playAgain); // restart the game if the user wants to play again

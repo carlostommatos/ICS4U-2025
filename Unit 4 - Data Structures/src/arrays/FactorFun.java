@@ -1,4 +1,4 @@
-package project4;
+package arrays;
 
 /*
 FactorFun
@@ -15,10 +15,10 @@ public class FactorFun {
 
         // create a 2d array to hold the factors of each number from 1-1000
         // an array list of an array list makes it so that I can use jagged arrays
-        ArrayList<ArrayList> factorArray = new ArrayList <ArrayList>(1000);
+        ArrayList<ArrayList<Integer>> factorArray = new ArrayList <ArrayList<Integer>>(1000);
 
         // fill the array with all of the factors
-        for (int i = 1; i < 1000; i++) {
+        for (int i = 1; i < 1000 + 1; i++) { // + 1 because
             // a temp array to hold all of the factors of one number
             // resets each run of the i for loop
             ArrayList<Integer> factors = new ArrayList<Integer>();
@@ -30,13 +30,27 @@ public class FactorFun {
             factorArray.add(factors); // add the factors of i to the list of factors
         } // i for loop
 
+        System.out.println("The factors of all the numbers from 1 to " + factorArray.size());
+        System.out.println(factorArray + "\n");
+
+        System.out.println("The numbers with the most factors from 1 to " + factorArray.size());
+        System.out.println(mostFactors(factorArray) + "\n");
+
+        System.out.println("The prime numbers from 1 to " + factorArray.size());
+        System.out.println(primeNumbers(factorArray) + "\n");
+
+        System.out.println("Is 28 a perfect number?");
+        System.out.println(perfectNumber(28, factorArray));
+        System.out.println("Is 29 a perfect number?");
+        System.out.println(perfectNumber(29, factorArray));
+
     } // main method
 
 
 
 
     // scans the 2d factor array to find the numbers with the most factors
-    public static ArrayList<Integer> mostFactors(ArrayList<ArrayList> factorArray) {
+    public static ArrayList<Integer> mostFactors(ArrayList<ArrayList<Integer>> factorArray) {
 
         // tracks the most amount of factors for all numbers
         int highestFactors = 0;
@@ -64,7 +78,7 @@ public class FactorFun {
 
 
     // scans the 2d array for all the prime numbers in the factor array
-    public static ArrayList<Integer> primeNumbers(ArrayList<ArrayList> factorArray) {
+    public static ArrayList<Integer> primeNumbers(ArrayList<ArrayList<Integer>> factorArray) {
 
         // list of all of the prime numbers
         ArrayList<Integer> primeArray = new ArrayList<Integer>();
@@ -80,31 +94,19 @@ public class FactorFun {
 
     // allow the user to enter a number and check if it is a perfect number
     // a perfect number is when all the factors other than itself add up to the number
-    public static boolean perfectNumber(int number) {
+    public static boolean perfectNumber(int number, ArrayList<ArrayList<Integer>> factorArray) {
 
-        // creates a list of all of the factors for the inputted number
-        ArrayList<Integer> factors = new ArrayList<Integer>();
-
-        // get all factors
-        for (int i = 1; i < number - 1; i++) {
-            if (number % i == 0)
-                factors.add(i);
-        }
-
-        // variable to check the sum of the factors
         int sum = 0;
-
-        // get the sum of the factors
-        for (int i = 0; i < factors.size() - 1; i++)
-            sum = sum + factors.get(i);
+        for (int i = 0; i < (factorArray.get(number - 1).size()) - 1; i++)
+            sum = sum + factorArray.get(number - 1).get(i);
 
         // if the sum is equal to the number, the number is perfect
-        if (sum == factors.get(factors.size() - 1))
+        if (sum == factorArray.get(number - 1).get(factorArray.get(number - 1).size() - 1))
             return true;
-
         else
             return false;
 
-    } // perfect number
+    } // perfectNumber method
+
 
 } // FactorFun class
