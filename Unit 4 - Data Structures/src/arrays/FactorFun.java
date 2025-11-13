@@ -1,7 +1,7 @@
 package arrays;
 
 /*
-FactorFun
+fFactorFun
 various methods to manipulate an array of factors
 Carlos Matos
 Tuesday, October 28, 2025
