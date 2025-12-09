@@ -1,5 +1,12 @@
 package stacksAndQueues;
 
+/*
+StackClient
+test the methods from the Stack class
+Carlos Matos
+Monday, December 1, 2025
+ */
+
 // The "StackClient" class.
 public class StackClient
 {

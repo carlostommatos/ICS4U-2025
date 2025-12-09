@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ICS4U-2025.iml" filepath="$PROJECT_DIR$/ICS4U-2025.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 3 - Recursion/Unit 3 - Recursion.iml" filepath="$PROJECT_DIR$/Unit 3 - Recursion/Unit 3 - Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 4 - Data Structures/Unit 4 - Data Structures.iml" filepath="$PROJECT_DIR$/Unit 4 - Data Structures/Unit 4 - Data Structures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Unit 5 - Searching and Sorting/Unit 5 - Searching and Sorting.iml" filepath="$PROJECT_DIR$/Unit 5 - Searching and Sorting/Unit 5 - Searching and Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sspc/sspc.iml" filepath="$PROJECT_DIR$/sspc/sspc.iml" />
     </modules>
   </component>
 </project>

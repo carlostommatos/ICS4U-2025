@@ -1,5 +1,12 @@
 package stacksAndQueues;
 
+/*
+Stack
+add methods to the existing stack class
+Carlos Matos
+Monday, December 1, 2025
+ */
+
 public class Stack
 {
 
